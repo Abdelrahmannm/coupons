@@ -6,8 +6,8 @@
 
                     <div><h1 style="font-size: 30px">Coupons</h1></div>
                   </a>
-                {{-- <i class="fas fa-laugh-wink"></i> --}}
-                {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
+                {{-- <i class="fas fa-laugh-wink"></i>
+               <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
             </a>
         </x-slot>
 

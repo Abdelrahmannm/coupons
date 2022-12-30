@@ -14,6 +14,14 @@ class Brand extends Model
     public function coupons(){
         return $this->hasMany(Coupon::class);
     }
+    public function scopeFilter($query, array $filters)
+    {
+        if($filters['search'] ?? false){
+            $query->where('name','like' ,'%'.request('search').'%')
+            ->orWhere('slug','like' ,'%'.request('search').'%')
+            ->orWhere('id',request('search'));
+        }
+    }
 
     public function getRouteKeyName()
     {

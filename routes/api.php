@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CouponController;
 
 /*
@@ -19,10 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/coupon',[CouponController::class,'indexapi']);
+Route::get('/coupons',[CouponController::class,'indexapi']);
+Route::get('/brands',[BrandController::class,'indexapi']);
 // Route::get('/coupon',[CouponController::class,'indexapi']);
 
-Route::get('/coupon/brand/{brand}',[CouponController::class,'showapi']);
+// Route::get('/coupon/brand/{brand}',[CouponController::class,'showapi']);
 
 
 

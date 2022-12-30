@@ -23,7 +23,8 @@ class Coupon extends Model
             $query->where('name','like' ,'%'.request('search').'%')
             ->orWhere('slug','like' ,'%'.request('search').'%')
             ->orWhere('description','like' ,'%'.request('search').'%')
-            ->orWhere('discount',request('search'));
+            ->orWhere('discount',request('search'))
+            ->orWhere('id',request('search'));
         }
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BrandRecourse;
 use App\Models\Brand;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -111,5 +112,9 @@ class BrandController extends Controller
     {
         $brand->delete();
         return back()->with('message', 'Brand Deleted Successfully!');
+    }
+    public function indexapi()
+    {
+        return BrandRecourse::collection(Brand::latest()->filter(request(['search']))->get());
     }
 }

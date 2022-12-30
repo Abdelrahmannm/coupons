@@ -116,9 +116,9 @@ class CouponController extends Controller
     {
         return CouponRecourse::collection(Coupon::latest()->filter(request(['search']))->get());
     }
-    public function showapi(Brand $brand)
-    {
-        return BrandRecourse::collection($brand->coupons);
-    }
+    // public function showapi(Brand $brand)
+    // {
+    //     return BrandRecourse::collection($brand->coupons);
+    // }
 
 }
