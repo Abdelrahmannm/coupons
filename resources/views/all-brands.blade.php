@@ -49,8 +49,8 @@
                 <td><img width="60px" height="60px" style="margin-bottom: 10px" src="{{$brand->path ? asset('images/'.$brand->path) : 'no' }}  "></td>
                 <td>{{$brand->url}}</td>
                 <td><a class='btn btn-info' href="{{route('all-brand-coupons',['brand'=>$brand])}}">Coupons</a></td>
-                <td><a class='btn btn-primary' href="{{route('edit-brand',['brand'=>$brand->slug])}}">Edit</a></td>
-                <td> <form action="{{route('delete-brand',['brand'=>$brand->slug])}}" method="post">
+                <td><a class='btn btn-primary' href="{{route('edit-brand',['brand'=>$brand->id])}}">Edit</a></td>
+                <td> <form action="{{route('delete-brand',['brand'=>$brand->id])}}" method="post">
                   @csrf
                   @method('delete')
                   <button type="submit" class='btn btn-danger'>Delete</button>

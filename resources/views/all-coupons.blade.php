@@ -45,8 +45,8 @@
                 <td>{{$coupon->name}}</td>
                 <td>{{$coupon->discount}}%</td>
                 <td>{{$coupon->description}}</td>
-                <td><a class='btn btn-primary' href="{{route('edit-coupon',['coupon'=>$coupon->slug])}}">Edit</a></td>
-                <td> <form action="{{route('delete-coupon',['coupon'=>$coupon->slug])}}" method="post">
+                <td><a class='btn btn-primary' href="{{route('edit-coupon',['coupon'=>$coupon->id])}}">Edit</a></td>
+                <td> <form action="{{route('delete-coupon',['coupon'=>$coupon->id])}}" method="post">
                   @csrf
                   @method('delete')
                   <button type="submit" class='btn btn-danger'>Delete</button>
