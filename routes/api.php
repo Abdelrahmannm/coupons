@@ -21,7 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/coupons',[CouponController::class,'indexapi']);
+Route::get('/coupons/{coupon}',[CouponController::class,'showapi']);
+
 Route::get('/brands',[BrandController::class,'indexapi']);
+Route::get('/brands/{brand}',[BrandController::class,'showapi']);
+
 // Route::get('/coupon',[CouponController::class,'indexapi']);
 
 // Route::get('/coupon/brand/{brand}',[CouponController::class,'showapi']);

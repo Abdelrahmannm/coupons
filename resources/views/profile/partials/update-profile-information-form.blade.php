@@ -19,13 +19,13 @@
 
         <div>
             <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" style="border-radius: 10px; border-style: solid;    font-size: 15px;" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
+            <x-text-input id="name" name="name" style=" border: 1px solid #555; border-radius: 5px;     margin-left: 15px;" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" name="email" style="border-radius: 10px; border-style: solid;font-size: 15px;" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
+            <x-text-input id="email" name="email" style=" border: 1px solid #555; border-radius: 5px;     margin-left: 17px;" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
@@ -33,7 +33,7 @@
                     <p class="text-sm mt-2 text-gray-800">
                         {{ __('Your email address is unverified.') }}
 
-                        <button form="send-verification" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <button form="send-verification" class=" underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                             {{ __('Click here to re-send the verification email.') }}
                         </button>
                     </p>

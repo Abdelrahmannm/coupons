@@ -117,4 +117,8 @@ class BrandController extends Controller
     {
         return BrandRecourse::collection(Brand::latest()->filter(request(['search']))->get());
     }
+    public function showapi(Brand $brand)
+    {
+        return new BrandRecourse($brand);
+    }
 }

@@ -21,7 +21,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$coupons->count()}}</div>
                           </div>
                           <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
                           </div>
                         </div>
                       </div>
@@ -38,7 +38,7 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$brands->count()}}</div>
                           </div>
                           <div class="col-auto">
-                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                            <i class="fas fa-flag fa-2x text-gray-300"></i>
                           </div>
                         </div>
                       </div>
