@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('slug')->nullable();
             $table->text('description');
             $table->integer('discount');
-            $table->foreignIdFor(Brand::class)->cascadeOnDelete;
+            $table->foreignIdFor(Brand::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

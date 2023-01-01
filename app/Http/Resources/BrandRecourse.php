@@ -17,6 +17,7 @@ class BrandRecourse extends JsonResource
         return [
             'id'=>$this->id,
             'name'=>$this->name,
+            'slug'=>$this->slug,
             'url'=>$this->url
         ];
     }

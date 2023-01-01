@@ -110,6 +110,7 @@ class BrandController extends Controller
      */
     public function destroy(Brand $brand)
     {
+        // Coupon::where('brand_id',
         $brand->delete();
         return back()->with('message', 'Brand Deleted Successfully!');
     }

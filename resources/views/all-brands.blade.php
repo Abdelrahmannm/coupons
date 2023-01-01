@@ -50,12 +50,41 @@
                 <td>{{$brand->url}}</td>
                 <td><a class='btn btn-info' href="{{route('all-brand-coupons',['brand'=>$brand])}}">Coupons</a></td>
                 <td><a class='btn btn-primary' href="{{route('edit-brand',['brand'=>$brand->id])}}">Edit</a></td>
-                <td> <form action="{{route('delete-brand',['brand'=>$brand->id])}}" method="post">
+
+                <td>
+                    <a class="btn btn-danger"  href="#" data-toggle="modal" data-target="#DeleteBrandModal">
+                        Delete
+                    </a>
+                    <div class="modal fade" id="DeleteBrandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Brand</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">this brand contains {{$brand->coupons->count()}} coupons</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <form action="{{route('delete-brand',['brand'=>$brand->id])}}" method="post">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="btn btn-danger" type="submit">Delete Brand</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {{-- <form action="{{route('delete-brand',['brand'=>$brand->id])}}" method="post">
                   @csrf
                   @method('delete')
                   <button type="submit" class='btn btn-danger'>Delete</button>
-                </form>
+                </form> --}}
                </td>
+
               </tr>
               @endforeach
             </tbody>

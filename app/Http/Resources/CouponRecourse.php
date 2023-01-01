@@ -20,6 +20,7 @@ class CouponRecourse extends JsonResource
             'name'=>$this->name,
             'description'=>$this->description,
             'discount'=>$this->discount,
+            'slug'=>$this->slug,
             'brand'=>Brand::find($this->brand_id)
         ];
     }
